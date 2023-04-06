@@ -42,7 +42,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function CustomizedAccordions() {
+export default function Experience() {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -57,7 +57,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Detection of Plant Dieases by using SVM
+           Detecting leaf diseases by using SVM.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -67,7 +67,17 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Detection of Missing Person by using IOT
+            Detecting missing person by using IOT.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+          <Typography>Project3</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Power BI
           </Typography>
         </AccordionDetails>
       </Accordion>
